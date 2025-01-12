@@ -1,5 +1,4 @@
 # python.io
-
 Ctrl+Alt+N запуск код runner для запуска файла пайтон для PyCharm
 Shiry+F10 запуск код runner для запуска файла пайтон для vs code
 
@@ -197,4 +196,55 @@ print(len(name)) #5
 numbers = [1, 2, 3, 4, 5]  
 total = sum(numbers)  
 print(total)  # Вывод: 15 (сумма всех чисел в списке)
+```
+
+### 8. **round()**
+**round()** — **встроенная функция в Python для округления чисел**. [1](https://skillbox.ru/media/code/okruglenie-v-python-vybiraem-luchshiy-sposob/)[3](https://pythonru.com/uroki/funkcija-round-dlja-nachinajushhih)
+**Синтаксис**: round(number, digits). В качестве первого аргумента (number) передаётся дробное число, а во втором (digits) указывается количество чисел после запятой. Второй аргумент по умолчанию равен нулю. [1](https://skillbox.ru/media/code/okruglenie-v-python-vybiraem-luchshiy-sposob/)
+
+**Возвращаемое значение**: функция round() возвращает ближайшее целое число к заданному числу, если количество цифр не указано, или число, округлённое до указанного количества цифр, если оно указано. [2](https://letpy.com/handbook/builtins/round/)
+
+**Алгоритм вычисления функции round() различается в разных версиях языка**:
+
+- **В Python 2** за основу взяты классические правила арифметики: 1, 2, 3, 4 после запятой ведут к округлению в меньшую сторону, а 5, 6, 7, 8, и 9 — в большую. Например: 7,6 → 8 — округление в большую сторону, 7,4 → 7 — округление в меньшую сторону. [1](https://skillbox.ru/media/code/okruglenie-v-python-vybiraem-luchshiy-sposob/)
+- **В Python 3** используется так называемый «банковский» метод, то есть округление до ближайшего чётного числа: 3,5 → 4, 6,5 → 6. 
+
+```python
+>>> round(6.4457, 2)
+6.45
+>>>
+```
+
+### 9. min
+
+**Функция min() в Python возвращает элемент с наименьшим значением** из переданных в функцию данных. [1](https://letpy.com/handbook/builtins/min/)
+
+**Параметры**:
+
+- **iterable** — итерируемый объект, такой как список, кортеж, набор, словарь и т. д.; [1](https://letpy.com/handbook/builtins/min/)[3](https://pythonstart.ru/osnovy/min-max-python)
+- ***iterables** (необязательно) — любое количество итераций, может быть более одного; [3](https://pythonstart.ru/osnovy/min-max-python)
+- **key** (необязательно) — ключевая функция, в которую передаются итерации, а сравнение выполняется на основе возвращаемого значения; [1](https://letpy.com/handbook/builtins/min/)[3](https://pythonstart.ru/osnovy/min-max-python)
+- **default** (необязательно) — значение по умолчанию, если данный итерируемый объект пуст. [1](https://letpy.com/handbook/builtins/min/)[3](https://pythonstart.ru/osnovy/min-max-python)
+
+```python
+number = [7, 3, 8, 5, 1, 6]  
+smallest_number = min(number)  
+print("Наименьшее число:", smallest_number) # 1
+```
+
+### 10. Max
+
+**Функция max() в Python возвращает самый большой элемент в итерируемом объекте**. Её также можно использовать для поиска самого большого элемента между двумя или более параметрами. [1](https://pythonstart.ru/osnovy/min-max-python)
+
+**Некоторые параметры функции**:
+
+- **iterable** — итерируемый объект, такой как список, кортеж, словарь или строка. [3](https://realpython.com/ref/builtin-functions/max/)
+- **default** — значение по умолчанию, если итерируемый объект пуст. [1](https://pythonstart.ru/osnovy/min-max-python)[3](https://realpython.com/ref/builtin-functions/max/)
+- **key** — ключевая функция, в которую передаются итерации, и выполняется сравнение на основе её возвращаемого значения. [1](https://pythonstart.ru/osnovy/min-max-python)
+Функция max() универсальна и может работать с различными типами данных, включая числа и строки. [3](https://realpython.com/ref/builtin-functions/max/)
+
+```python
+number = [7, 3, 8, 5, 1, 6]  
+maxtest_number = max(number)  
+print("Наибольшее число:", maxtest_number) #8
 ```
