@@ -351,3 +351,38 @@ my_func(10, 5)   # результат функции
 ```
 
 >Вызов функции
+
+
+
+## Инструкции
+
+_Инструкция_ выполняет _действие_
+
+```python
+my_name('Artem')   # Присвоения значения
+```
+
+```python
+# Условная инструкция
+if my_name:
+    print(my_name)
+```
+
+```python
+# Импортирование модуля
+import datetime
+```
+
+```python
+import datetime  
+  
+print(datetime.datetime.now())   # 2025-01-17 17:29:52.595815 вывели время в данную секунду
+```
+
+Чтобы узнать инструкцию, пропишем
+
+```python
+import datetime  
+  
+print(import datetime) # Expression expected - это означает, import является инструкцией
+```
