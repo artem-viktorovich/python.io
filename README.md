@@ -1,6 +1,8 @@
-# python.io
+# Python
 
 При запуске кода через терминал, должны быть активны <string>>>> </string> это сообщает, что интерпретатор пайтон активен
+
+Если просто пишутся выражения, то результат не будет видно и интерпретатор не отображает результат
 
 ## Самое важное в Python
 
@@ -91,7 +93,7 @@ print(name)
 >Введите ваше имя: Артем
  Артем - значение str
  
-### 3. **dir()
+### 3. dir()
 
 **dir() в Python** — **встроенная функция, которая возвращает список всех атрибутов и методов объекта**. [1](https://proghunter.ru/articles/pythons-dir-function-object-reference)
 
@@ -191,7 +193,7 @@ total = sum(numbers)
 print(total)  # Вывод: 15 (сумма всех чисел в списке)
 ```
 
-### 8. **round()**
+### 8. round()
 **round()** — **встроенная функция в Python для округления чисел**. [1](https://skillbox.ru/media/code/okruglenie-v-python-vybiraem-luchshiy-sposob/)[3](https://pythonru.com/uroki/funkcija-round-dlja-nachinajushhih)
 **Синтаксис**: round(number, digits). В качестве первого аргумента (number) передаётся дробное число, а во втором (digits) указывается количество чисел после запятой. Второй аргумент по умолчанию равен нулю. [1](https://skillbox.ru/media/code/okruglenie-v-python-vybiraem-luchshiy-sposob/)
 
@@ -242,6 +244,15 @@ maxtest_number = max(number)
 print("Наибольшее число:", maxtest_number) #8
 ```
 
+### 11. int()
+**Int в Python** — это **тип данных, представляющий целые числа** вида 0, 1 или 10. [1](https://practicum.yandex.ru/blog/tipy-dannyh-v-python/) В Python целыми числами являются все числа, которые лишены дробной части, то есть не имеют плавающей точки. [2](https://timeweb.com/ru/community/articles/chisla-v-python-i-metody-raboty-s-nimi)
+
+Для преобразования значений в целые числа в Python используется **встроенная функция int()**. [3](https://letpy.com/handbook/builtins/int/)[4](https://ru.hexlet.io/qna/python/questions/chto-delaet-funktsiya-int-v-python) Она принимает два параметра: [3](https://letpy.com/handbook/builtins/int/)
+
+1. **value** — любая числовая строка, байтовый объект или число. [3](https://letpy.com/handbook/builtins/int/)
+2. **base** (необязательный) — система счисления, в которой в данный момент находится значение. [3](https://letpy.com/handbook/builtins/int/)
+
+Если передать функции целое число, то она вернёт его же. Если передать вещественное (дробное) число, то оно будет округлено до целого в сторону нуля (отбрасывая дробную часть). Функция int(), вызванная без аргументов, вернёт 0. [4](https://ru.hexlet.io/qna/python/questions/chto-delaet-funktsiya-int-v-python)
 
 ### 12. str()
 
@@ -269,7 +280,6 @@ print("Наибольшее число:", maxtest_number) #8
 **Синтаксис функции**: dir([object]), где object — необязательный параметр. Если object не указан, то функция возвращает список всех идентификаторов в текущей локальной области видимости. [1](https://proghunter.ru/articles/pythons-dir-function-object-reference)
 
 **При вызове без аргумента** dir() возвращает список переменных, доступных в локальной области. **Если передать функции объект**, она вернёт список атрибутов указанного объекта. [2](https://ru.hexlet.io/qna/python/questions/chto-takoe-funktsiya-dir-v-python)
-
 
 ## Отступы в коде PYTHON
 
@@ -316,6 +326,28 @@ print(my_list)  #[1, 2, 3] - python проигнорировал лишние о
 
 ```
 
-### Комментарии
+### Выражения (Expressions)
 
-_**Python игнорирует**_ комментарии
+Результатом каждого _выражения_ является _значение_
+
+```python
+5 + 3   #8 - сумма значений
+```
+
+```python
+a > b  # True или False
+```
+
+>Cравнивание значений 2х переменных
+
+```python
+'Hello' + 'World'  # 'Hello World' 
+```
+
+>Соединение 2х строк
+
+```python
+my_func(10, 5)   # результат функции
+```
+
+>Вызов функции
