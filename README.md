@@ -386,3 +386,15 @@ import datetime
   
 print(import datetime) # Expression expected - это означает, import является инструкцией
 ```
+
+## Переменные
+
+#### Имена в Python
+
+>_snake_case_ - переменные, функции, методы, модули (часто используемые)
+
+> _PascalCase_ - Классы
+
+> _my-package_ - Пакеты (наборы модулей)
+
+> _DB_PASSWORD_ - Константы
