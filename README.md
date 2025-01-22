@@ -508,7 +508,8 @@ _Двойные кавычки_ используют для написания �
 ```python
 info_msg = """You are  
 learning the easiest  
-programing language - Python"""   # 3 двойных кавычки
+programing language - 
+Python"""   # 3 двойных кавычки
 
 print(info_msg)
 #You are  
@@ -516,6 +517,7 @@ print(info_msg)
 #programing language -   
 #Python
 ```
+
 ### Встроенные функции и строки
 
 ```python
@@ -526,3 +528,36 @@ print(my_name[0])
   # B - вывести символ строки по индексу
 print(my_name[3:5])
 #em - показать символы с индексами с 3 по 5
+```
+
+## Целые числа - _int_
+
+```python
+input_str = input("Введите число:")  
+  
+print(input_str)  # Введите число:10
+  
+print(type(input_str))   # <class 'str'>
+```
+
+Выполним конвертацию
+
+Если делать конвертацию строки в число
+```python
+input_str = input("Введите число:")  #aaa
+input_int = int(input_str)  
+print(input_int)  
+  print(type(input_int))
+#Введите число:фис
+#Traceback (most recent call last):
+  #File "D:\Обучалка\Python\python\main.py", line 2, in <module>
+#    input_int = int(input_str)
+#ValueError: invalid literal for int() with base 10: 'фис'
+```
+
+Возведение в степень и тип переменной
+```python
+int_pow = pow(2, 3)  # 8
+print(type(int_pow))  #<class 'int'>
+```
+
