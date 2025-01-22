@@ -516,3 +516,13 @@ print(info_msg)
 #programing language -   
 #Python
 ```
+### Встроенные функции и строки
+
+```python
+my_name = 'Artem'  
+print(len(my_name))  
+  # 5 - число символов в строке
+print(my_name[0])  
+  # B - вывести символ строки по индексу
+print(my_name[3:5])
+#em - показать символы с индексами с 3 по 5
