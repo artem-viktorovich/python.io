@@ -599,3 +599,28 @@ rate = 0.78
 print(round(rate))   # 1
 print(type(round(rate)))   # <class 'int'>
 ```
+
+## Комплексные числа - _complex_
+
+> Комплексное число состоит из действительной и мнимой части
+
+<strong style='color: #6ABDC8; text-align-center; margin: 0 auto: font-size: 30px'>Структура и синтаксис</strong>
+
+Результат сложения
+```python
+complex_a = 10 +7j  
+complex_b = 3 + 3j  
+  
+res = (complex_a + complex_b) 
+print(res)   # (13+10j)
+```
+
+Результат умножения
+```python
+complex_a = 10 + 7j  
+complex_b = 3 + 3j  
+  
+res = (complex_a * complex_b)  
+print(res)  # (9+51j)
+# (10 + 7j)(3 + 3J) = 30 + 30j + 21j - 21 = (9 + 51j)   +21j^2 превращается в -21
+```
