@@ -561,3 +561,41 @@ int_pow = pow(2, 3)  # 8
 print(type(int_pow))  #<class 'int'>
 ```
 
+## Числа с десятичной точкой - _float_
+
+```python
+average_price = 17.1  
+  
+print(average_price)  # 17.1
+  
+print(type(average_price)) # <class 'float'>
+```
+
+#### Конвертация чисел
+
+```python
+average_price = 17.12  
+price = int(average_price)  #  конвертировали в целое число
+print(type(price))  # <class 'int'>
+print(price)  # 17
+```
+
+```python
+str_temperature = '17.12'  
+temperature = float(str_temperature)  # конвертировалb в десятичное число
+print(type(temperature))   # <class 'float'>
+print(temperature)  # 17.12
+```
+
+#### Округление до ближайшего целого числа - _int_
+
+```python
+average_price = 17.20  
+print(round(average_price))   # 1 
+```
+
+```python
+rate = 0.78  
+print(round(rate))   # 1
+print(type(round(rate)))   # <class 'int'>
+```
