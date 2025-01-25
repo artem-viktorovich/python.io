@@ -624,3 +624,49 @@ res = (complex_a * complex_b)
 print(res)  # (9+51j)
 # (10 + 7j)(3 + 3J) = 30 + 30j + 21j - 21 = (9 + 51j)   +21j^2 превращается в -21
 ```
+
+## Логический тип - _bool_
+
+##### Структура и синтаксис
+
+```python
+is_autorised = True  
+  
+print(is_autorised)  # True
+  
+print(type(is_autorised))  #<class 'bool'>
+```
+
+<i style='color: #FE6B73;'>BOOl</i> часто используется при проверке правдивости выражения
+
+Результаты выражений
+
+```python
+print(100 > 24)  #True
+  
+print(-5 > 0)  #False
+  
+print('Long string' > 'Long')  #True (выполняется посимновльное сравнение)
+
+print('Long string' > 'Self')  #False (выполняется посимновльное сравнение)
+  
+print([1, 2, 3] == [1, 2, 3])   #True
+```
+
+Конвертация в _логическое_ значение
+
+```python
+bool(my_value)
+^встроенная функция
+```
+
+```python
+print(bool(10))    #True
+print(bool('abc'))    #True
+print(bool([]))    #False
+print(bool([1, 2, 3]))  #True
+print(bool({}))    #False
+print(bool(None))   #False
+print({'a': 1} == {'a': 2})   #False
+print({'a': 1} == {'a': 1})    #True
+```
