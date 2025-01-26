@@ -774,3 +774,116 @@ print(help(my_list.__eq__))
 None
 """
 ```
+
+## Списки _LIST_
+
+> Список - упорядоченная последовательность элементов
+
+##### Структура и синтаксис
+
+```python
+my_fruits = ["apple", "banana", "cherry"]  #тип класса str
+  
+posts_ids = [345, 56, 34, 34]  # тип класса int
+  
+user_inputs = [True, '🤩', 'hi!', 10.5]   # джопускается разнотипность
+```
+
+> Порядок элементов в списке <u>имеет значение</u>
+
+```python
+my_fruits = ['apple', 'banana', 'cherry']  
+other_fruits = ['apple', 'cherry', 'banana']  
+print(my_fruits == other_fruits)   #False
+```
+
+```python
+my_fruits = ['apple', 'banana', 'cherry']  
+other_fruits = ['apple', 'banana', 'cherry']  
+print(my_fruits == other_fruits)   #True
+```
+
+### Длина списка
+
+```python
+empty_list = []  
+print(len(empty_list))    #0
+my_fruits = ['apple', 'banana', 'cherry']  
+print(len(my_fruits))    #2
+posts_ids = [345, 56, 34, 34]  
+print(len(posts_ids))   #4
+user_inputs = [True, '🤩', 'hi!', 10.5]  
+print(len(user_inputs))  #4
+```
+
+Чтобы получить определённые значения, нужно использовать id
+
+```python
+inputs_ids = [True, '🤩', 'hi!', 10.5]  
+print(inputs_ids[0])   #True
+print(inputs_ids[1])   #🤩
+print(inputs_ids[-1])   #10.5
+```
+
+Изменение значений 
+
+```python
+inputs_ids = [True, '🤩', 'hi!', 10.5]  
+inputs_ids[0] = False  
+inputs_ids[1] = '😋'  
+print(inputs_ids)   #[False, '😋', 'hi!', 10.5] - перезаписали значения айдишника
+```
+
+Для удаление элемента, используется функция _del_ 
+
+```python
+inputs_ids = [True, '🤩', 'hi!', 10.5]  
+del inputs_ids[0]  
+print(len(inputs_ids))   #3
+print(inputs_ids)   #['🤩', 'hi!', 10.5]
+```
+
+В списках могут встречаться словари, данный способ используется довольно часто
+
+```python
+users = [  
+    {        
+        'user_id': 123,  #ключ:значение
+        'user_name': 'Anton'  #ключ:значение
+    },  
+    {  
+        'user_id': 345,  #ключ:значение
+        'user_name': 'Artur'  #ключ:значение
+    }  
+]  
+  
+print(len(users))  #2
+print(users[1]['user_id'])   #345
+```
+
+Использование переменных
+
+```python
+my_fruit = 'Apple'  
+other_fruit = 'Banana'  
+new_fruit = 'lime'  
+all_fruits = [my_fruit, other_fruit, new_fruit]  
+print(all_fruits)   #['Apple', 'Banana', 'lime'] - сформированный список значений
+```
+
+Несуществующие элементы
+
+```python
+inputs_ids = [True, '🤩', 'hi!', 10.5]  
+print(inputs_ids[10]) 
+
+"""
+Traceback (most recent call last):
+  File "D:\Обучалка\Python\python\main.py", line 2, in <module>
+    print(inputs_ids[10])
+          ~~~~~~~~~~^^^^
+IndexError: list index out of range
+
+Ошибка при использовании несуществующего индекса
+"""
+```
