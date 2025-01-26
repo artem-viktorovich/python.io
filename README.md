@@ -1004,3 +1004,50 @@ last_two_ratings = ratings[-2:]
 print(last_two_ratings)   #[3.7, 4.5]
 ```
 
+
+## Копирование списков
+
+```python
+my_cars = ['BMW', 'Mercedes']  
+copied_cars = my_cars # копирование по ссылке  
+copied_cars.append('Jeep')  
+print(copied_cars)   #['BMW', 'Mercedes', 'Jeep']
+print(id(my_cars) == id(copied_cars))   #True
+#Такой метод не стоит использовать
+```
+
+> Вариант, которые используются
+
+1 вариант
+
+```python
+my_cars = ['BMW', 'Mercedes']  
+copied_cars = my_cars[:] # создание нового списка, используя slice
+copied_cars.append('Jeep')  
+print(copied_cars)   #['BMW', 'Mercedes', 'Jeep']
+print(my_cars)   #['BMW', 'Mercedes']
+print(id(my_cars) == id(copied_cars))  #False
+#В данном случае переменная my_cars не изменена
+```
+
+2 вариант
+
+```python
+my_cars = ['BMW', 'Mercedes']  
+copied_cars = my_cars.copy()   # создание нового списка использя метод copy 
+copied_cars.append('Jeep')  
+print(copied_cars)   #['BMW', 'Mercedes', 'Jeep']
+print(my_cars)   #['BMW', 'Mercedes']
+print(id(my_cars) == id(copied_cars))   #False
+```
+
+3 вариант
+
+```python
+my_cars = ['BMW', 'Mercedes']  
+copied_cars = list(my_cars)  # создание нового списка в переменной, используя встроенную функцию list
+copied_cars.append('Jeep')  
+print(copied_cars)  #['BMW', 'Mercedes', 'Jeep']
+print(my_cars)  #['BMW', 'Mercedes']
+print(id(my_cars) == id(copied_cars))   #False
+```
