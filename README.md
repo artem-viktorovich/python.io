@@ -950,3 +950,57 @@ posts_ids.sort(reverse=True)
 print(posts_ids)   #[678, 345, 245, 234, 45] - сортировка по убыванию
 ```
 
+### Разные операции со списками
+
+#### Конвертация в список
+
+```python
+greeting = "Hello from Python"  
+greeting_letters = list(greeting)  
+print(greeting_letters)
+# ['H', 'e', 'l', 'l', 'o', ' ', 'f', 'r', 'o', 'm', ' ', 'P', 'y', 't', 'h', 'o', 'n']
+
+"""При конвертации словаря в список, значения ключей теряются"""
+my_dict = {'a': 10, 'b': 20, 'c': 30}  
+my_dict_keys = list(my_dict)  
+print(my_dict_keys)
+#['a', 'b', 'c']
+
+```
+
+#### Арифметические операции в списках
+
+```python
+ratings = [2.4, 5.0, 4.3, 3.7]  
+print(min(ratings))  #2.4
+print(max(ratings))  #5.0
+print(sum(ratings))  #15.4
+  
+print(sum(ratings)/len(ratings))   #3.85
+```
+
+#### Объединение списков
+
+```python
+my_ratings = [2.5, 5.0]  
+other_ratings = [2.6, 6.0, 4.0]  
+all_ratings = my_ratings + other_ratings  
+print(all_ratings)   #[2.5, 5.0, 2.6, 6.0, 4.0]
+
+#отсортируем список
+sorted_ratings = sorted(all_ratings)  
+print(sorted_ratings)   #[2.5, 2.6, 4.0, 5.0, 6.0]
+```
+
+#### Нарезка списков
+
+```python
+ratings = [2.4, 5.0, 4.3, 3.7, 4.5]  
+first_two_ratings = ratings[:2]  
+print(first_two_ratings)  #[2.4, 5.0]
+middle_ratings = ratings[1:-1]  
+print(middle_ratings)    #[5.0, 4.3, 3.7]
+last_two_ratings = ratings[-2:]  
+print(last_two_ratings)   #[3.7, 4.5]
+```
+
