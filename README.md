@@ -1051,3 +1051,89 @@ print(copied_cars)  #['BMW', 'Mercedes', 'Jeep']
 print(my_cars)  #['BMW', 'Mercedes']
 print(id(my_cars) == id(copied_cars))   #False
 ```
+
+## Словари _dict_
+
+> Словарь - набор элементов _ключ:значение_
+
+> Порядок элементов в  _словаре_ <u>не имеет значения</u>
+
+Сравнение словарей
+
+```python
+my_motorbike = {  
+    'brand': 'Ducati',  
+    'price': 150000,  
+    'engine_vol': 1.2  
+}  
+  
+other_motorbike = {  
+    'brand': 'Ducati',  
+    'engine_vol': 1.2,  
+    'price': 150000  
+}  
+  
+print(my_motorbike==other_motorbike)   #True
+
+#Технически, для пайтон, это одинаковые словари и порядок ключей и значений не играет роль
+
+print(id(my_motorbike)==id(other_motorbike))   #False
+#Айди разные
+```
+
+### Изменение и удаление значений в словарях
+
+#### Получение значений
+
+```python
+my_motorbike = {  
+    'brand': 'Ducati',  
+    'price': 150000,  
+    'engine_vol': 1.2  
+}  
+  
+print(my_motorbike['brand'])   #Ducati
+print(my_motorbike['engine_vol'])   #1.2
+```
+
+#### Изменение значений
+
+```python
+my_motorbike = {  
+    'brand': 'Ducati',  
+    'price': 150000,  
+    'engine_vol': 1.2  
+}  
+  
+my_motorbike['engine_vol'] = 3  
+print(my_motorbike)
+#{'brand': 'Ducati', 'price': 150000, 'engine_vol': 3}
+```
+
+#### Добавление новых значений
+
+```python
+my_motorbike = {  
+    'brand': 'Ducati',  
+    'price': 150000,  
+    'engine_vol': 1.2  
+}  
+  
+my_motorbike['is_new'] = True  
+print(my_motorbike)
+#{'brand': 'Ducati', 'price': 150000, 'engine_vol': 1.2, 'is_new': True}
+```
+
+#### Удаление элементов
+
+```python
+my_motorbike = {  
+    'brand': 'Ducati',  
+    'price': 150000,  
+    'engine_vol': 1.2  
+}  
+  
+del my_motorbike['price']  
+print(my_motorbike)
+#{'brand': 'Ducati', 'engine_vol': 1.2}
+```
