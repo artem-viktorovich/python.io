@@ -1276,3 +1276,56 @@ dict(**kwargs) -> новый словарь, инициализируемый п
 """
 ```
 
+Работа с методом <i>items</i>
+
+```python
+my_motorbike = {  
+    'brand': 'Ducati',  
+    'price': 150000,  
+    'engine_vol': 1.2  
+}  
+  
+print(my_motorbike.items())
+#dict_items([('brand', 'Ducati'), ('price', 150000), ('engine_vol', 1.2)])
+"""
+В списке пары, в которых находятся ключ и значение - _кортеж_
+Результат вывода является экземпляром класса dict_items
+"""
+```
+
+Работа с методом <i>items</i>
+
+```python
+my_motorbike = {  
+    'brand': 'Ducati',  
+    'price': 150000,  
+    'engine_vol': 1.2  
+}  
+print(my_motorbike.keys())
+#dict_keys(['brand', 'price', 'engine_vol'])
+```
+
+### Копирование словаря copy()
+
+```python
+my_motorbike = {  
+    'brand': 'Ducati',  
+    'price': 150000,  
+    'engine_vol': 1.2  
+}  
+new_motorbike = my_motorbike.copy()  
+new_motorbike['type'] = 'ssd'  
+print(new_motorbike)  
+#{'brand': 'Ducati', 'price': 150000, 'engine_vol': 1.2, 'type': 'ssd'}
+print(id(my_motorbike) == id(new_motorbike))   #False
+```
+
+
+### Конвертация других значений в словарь
+
+```python
+my_list = [['brand', 'BMW'], ['price', 30000]]  #список
+  
+my_dict = dict(my_list) #конвертация в словарь
+print(my_dict)   # {'brand': 'BMW', 'price': 30000}
+```
