@@ -1137,3 +1137,51 @@ del my_motorbike['price']
 print(my_motorbike)
 #{'brand': 'Ducati', 'engine_vol': 1.2}
 ```
+
+### Использование переменных в словарях
+
+#### Доступ к значению элемента с помощью переменной
+
+```python
+my_motorbike = {  
+    'brand': 'Ducati',  
+    'price': 150000,  
+    'engine_vol': 1.2  
+}  
+key_name = 'brand'  
+my_motorbike[key_name] = 'Mercedes'  
+print(my_motorbike)
+#{'brand': 'Mercedes', 'price': 150000, 'engine_vol': 1.2}
+```
+
+#### Вложенные словари
+
+```python
+my_motorbike = {  
+    'brand': 'Ducati',  
+    'engine_vol': 1.2,  
+    'price_info':{  
+        'price': 25000,  
+        'is_available': True  
+    }  
+}  
+print(my_motorbike['price_info']['price'])   #25000 
+print(my_motorbike['price_info']['is_available'])   #True
+```
+
+#### Использование переменных для создания словарей
+
+```python
+brand = 'Ducati'  
+bike_price = 25000  
+engine_volume = 1.2  
+  
+my_motorbike = {  
+    'brand' : brand,  
+    'bike_price' : bike_price,  
+    'engine_vol' : engine_volume,  
+}  
+  
+print(my_motorbike)
+#{'brand': 'Ducati', 'bike_price': 25000, 'engine_vol': 1.2}
+```
