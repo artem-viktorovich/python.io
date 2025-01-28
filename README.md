@@ -1244,3 +1244,35 @@ print(my_motorbike.get('brand'))   #Ducati
 print(my_motorbike.get('qty', 0))   #0
 ```
 
+Чтобы проверить значение атрибута словаря, нужно использовать <i>__doc__</i>
+
+```python
+my_motorbike = {}  
+  
+print(my_motorbike.__doc__)
+#Получим документацию, как работать со словарём
+"""
+dict() -> new empty dictionary
+dict(mapping) -> new dictionary initialized from a mapping object's
+    (key, value) pairs
+dict(iterable) -> new dictionary initialized as if via:
+    d = {}
+    for k, v in iterable:
+        d[k] = v
+dict(**kwargs) -> new dictionary initialized with the name=value pairs
+    in the keyword argument list.  For example:  dict(one=1, two=2)
+"""
+
+"""
+dict() -> новый пустой словарь
+dict(сопоставление) -> новый словарь, инициализируемый из объекта сопоставления.
+    пары (ключ, значение)
+dict(повторяемый) -> новый словарь, инициализируемый как если бы через:
+    d = {}
+    для k, v в повторяющемся:
+        d[k] = v
+dict(**kwargs) -> новый словарь, инициализируемый парами имя=значение
+    в списке аргументов ключевого слова.  Например: dict(one=1, two=2)
+"""
+```
+
