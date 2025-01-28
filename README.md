@@ -1200,3 +1200,47 @@ del my_motorbike['brand']
 print(my_motorbike)   #{'price': 150000, 'engine_vol': 1.2}
 print(len(my_motorbike))   #2
 ```
+
+### Несуществующие ключи и метод _get_
+
+Чтобы проверить наличие ключа в словаре, пропишем синтаксис, который будет возвращать _None_
+
+```python
+my_motorbike = {  
+    'brand': 'Ducati',  
+    'price': 150000,  
+    'engine_vol': 1.2  
+}  
+  
+print(my_motorbike.get('model'))   #None
+#Ошибки ключа нет
+```
+
+Также можно прописать значение, которое будет выведено при запросе вывода ключа
+
+```python
+my_motorbike = {  
+    'brand': 'Ducati',  
+    'price': 150000,  
+    'engine_vol': 1.2  
+}  
+  
+print(my_motorbike.get('qty', 0))   #0
+                              ^
+#значение на случай отсутствия ключа
+```
+
+> Метод _get_ стоит использовать, когда возникает неуверенность в наличии ключа
+
+```python
+my_motorbike = {  
+    'brand': 'Ducati',  
+    'price': 150000,  
+    'engine_vol': 1.2  
+}  
+  
+print(my_motorbike.get('engine_vol'))   #1.2
+print(my_motorbike.get('brand'))   #Ducati
+print(my_motorbike.get('qty', 0))   #0
+```
+
