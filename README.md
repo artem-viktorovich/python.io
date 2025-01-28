@@ -1185,3 +1185,18 @@ my_motorbike = {
 print(my_motorbike)
 #{'brand': 'Ducati', 'bike_price': 25000, 'engine_vol': 1.2}
 ```
+
+
+### Длина словаря
+
+```python
+my_motorbike = {  
+    'brand': 'Ducati',  
+    'price': 150000,  
+    'engine_vol': 1.2  
+}  
+print(len(my_motorbike))   #3
+del my_motorbike['brand']  
+print(my_motorbike)   #{'price': 150000, 'engine_vol': 1.2}
+print(len(my_motorbike))   #2
+```
