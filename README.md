@@ -582,7 +582,7 @@ print(price)  # 17
 
 ```python
 str_temperature = '17.12'  
-temperature = float(str_temperature)  # конвертировалb в десятичное число
+temperature = float(str_temperature)  # конвертировали в десятичное число
 print(type(temperature))   # <class 'float'>
 print(temperature)  # 17.12
 ```
@@ -646,9 +646,9 @@ print(100 > 24)  #True
   
 print(-5 > 0)  #False
   
-print('Long string' > 'Long')  #True (выполняется посимновльное сравнение)
+print('Long string' > 'Long')  #True (выполняется посимвольное сравнение)
 
-print('Long string' > 'Self')  #False (выполняется посимновльное сравнение)
+print('Long string' > 'Self')  #False (выполняется посимвольное сравнение)
   
 print([1, 2, 3] == [1, 2, 3])   #True
 ```
@@ -2188,111 +2188,3 @@ list2 = [4, 5, 6]
 result = merge_lists_to_dict(list1, list2)  
 print(result)  #{1: 4, 2: 5, 3: 6}
 ```
-
-## Аргументы функций
-
-> _**Параметры**_, это переменные, которые указываются внутри функции
-> _**Аргументы**_ - изменяются при каждом вызове функции
-
->  Ошибка отсутствия аргументов
-
-```python
-def sum_nums(a, b):  
-    c = a + b  
-    return c  
-  
-print(sum_nums(1, 2))  #3
-  
-print(sum_nums(2))  
-  """ 
-  Traceback (most recent call last):
-  File "D:\Обучалка\Python\python\main.py", line 7, in <module>
-    print(sum_nums(2))
-          ~~~~~~~~^^^
-TypeError: sum_nums() missing 1 required positional argument: 'b'
-"""  # Трубует ввести аргумент 'b'
-print(sum_nums())
-
-"""Traceback (most recent call last):
-  File "D:\Обучалка\Python\python\main.py", line 7, in <module>
-    print(sum_nums())
-          ~~~~~~~~^^
-TypeError: sum_nums() missing 2 required positional arguments: 'a' and 'b' """
-# Трубует ввести аргумент оба аргумента
-```
-
-> Ошибка чрезмерного количества аргументов
-
-```python
-def sum_nums(a, b):  
-    c = a + b  
-    return c  
-  
-  
-print(sum_nums(1, 2, 7))
-
-""" Traceback (most recent call last):
-  File "D:\Обучалка\Python\python\main.py", line 6, in <module>
-    print(sum_nums(1, 2, 7))
-          ~~~~~~~~^^^^^^^^^
-TypeError: sum_nums() takes 2 positional arguments but 3 were given """
-
-```
-
-### Объединение всех аргументов в кортеж в функции
-
-> Может ли функция принимать _любое_ количество аргументов?
-
-Объединение аргументов в кортеж, _tuple_
-
-С помощью _*_ происходить объединение позиционных аргументов в один кортеж
-
-```python
-def sum_nums (*args):  
-    print(args)  # (1, 2, 3, 4) - сформированный кортеж
-    print(type(args))  #<class 'tuple'>
-  
-    print(args[0])  # 1 - вызов определённого аргумента через индеккс
-    return sum(args)  # 10 - возврат суммы всех аргументов
-print(sum_nums(1,2,3,4)) #- передаваемые аргументы
-```
-
-##### Позиционные аргументы
-
-```python
-def get_posts_info(name, posts_qty):  
-    info = f"{name} wrote {posts_qty} posts"    return info  
-  
-  
-info = get_posts_info('Artem', 29)  
-print(info)  # Artem wrote 29 posts
-```
-
-> Позиционные аргументы ('Artem', 29). Порядок аргументов _**важен**_
-
-_**F-строки**_ (или форматированные строки) в Python — это новый способ форматирования строк. Они позволяют более удобно и наглядно вставлять значения переменных в строки.
-
-Базовый синтаксис f-строк выглядит следующим образом:
-
-```python
-name = "Иван"
-age = 25
-message = f"Меня зовут {name}, мне {age} лет."
-print(message)
-```
-
-В этом примере мы используем f перед кавычками, чтобы обозначить f-строку. Внутри фигурных скобок мы можем вставить имена переменных, которые будут заменены их значениями. В результате выполнения этого кода мы получим строку «Меня зовут Иван, мне 25 лет».
-
-F-строки также поддерживают более сложные выражения и операции внутри фигурных скобок. Например, вы можете выполнять арифметические операции или вызывать функции:
-
-```python
-def calculate_age(year):
-    return year - 2000
-
-birth_year = 1998
-age = calculate_age(birth_year)
-message = f"Я родился в {birth_year}, сейчас мне {calculate_age(birth_year)} лет."
-message += f" Это значит, что в 2100 году мне будет {age + 42} года."
-print(message)
-```
-
