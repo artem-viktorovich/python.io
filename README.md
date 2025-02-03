@@ -582,7 +582,7 @@ print(price)  # 17
 
 ```python
 str_temperature = '17.12'  
-temperature = float(str_temperature)  # конвертировалb в десятичное число
+temperature = float(str_temperature)  # конвертировали в десятичное число
 print(type(temperature))   # <class 'float'>
 print(temperature)  # 17.12
 ```
@@ -646,9 +646,9 @@ print(100 > 24)  #True
   
 print(-5 > 0)  #False
   
-print('Long string' > 'Long')  #True (выполняется посимновльное сравнение)
+print('Long string' > 'Long')  #True (выполняется посимвольное сравнение)
 
-print('Long string' > 'Self')  #False (выполняется посимновльное сравнение)
+print('Long string' > 'Self')  #False (выполняется посимвольное сравнение)
   
 print([1, 2, 3] == [1, 2, 3])   #True
 ```
