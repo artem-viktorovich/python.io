@@ -2193,7 +2193,8 @@ print(result)  #{1: 4, 2: 5, 3: 6}
 
 ```python
 def get_posts_info(name, posts_qty):  
-    info = f"{name} wrote {posts_qty} posts"    return info  
+    info = f"{name} wrote {posts_qty} posts"    
+    return info  
   
   
 info = get_posts_info(name='Artem', posts_qty=29)  
@@ -2211,7 +2212,8 @@ print(info)  # Artem wrote 29 posts
 ```python
 def get_posts_info(**person):  
     print(person)  # {'name': 'Artem', 'posts_qty': 29}
-    info = f"{person['name']} wrote {person['posts_qty']} posts"    return info  
+    info = f"{person['name']} wrote {person['posts_qty']} posts"    
+    return info  
   
   
 info = get_posts_info(name='Artem', posts_qty=29)  
