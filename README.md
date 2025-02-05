@@ -2285,7 +2285,8 @@ print(info)  #{'brand': 'BMW', 'price': 30000, 'is_available': True}
 ```python
 def mult_by_factor(value, multiplier=1):  
     return value * multiplier  
-  
+
+
 print(mult_by_factor(10, 2))  # 20
 print(mult_by_factor(5))  #5
 ```
