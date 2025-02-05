@@ -2227,3 +2227,55 @@ print(info)  # Artem wrote 29 posts
 В основной части кода мы вызываем функцию get_posts_info и передаём ей словарь с ключами name и posts_qty, где name имеет значение 'Artem', а posts_qty — значение 29. Результат вызова функции сохраняется в переменной info.
 
 Таким образом, функция get_posts_info позволяет получить информацию о пользователе в виде строки.
+
+
+> Задача 1
+- Переписать вызов функции _merge_lists_to_dict_ из предыдущей задачи так, чтобы в нём использовались аргументы с ключевыми словами
+- Добавить ещё один вызов функции, в котором будет один позиционный аргумент, а второй - аргумент с ключевым словом
+
+> Решение
+
+```python
+brand = ['BMW', 'Audi', 'Toyota']  
+price = [30000, 35000, 28000]  
+  
+  
+def merge_lists_to_dict(brand, price):  
+    create_zip_list = zip(brand, price)  
+    return dict(create_zip_list)  
+  
+  
+print(merge_lists_to_dict(brand, price))  
+# {'BMW': 30000, 'Audi': 35000, 'Toyota': 28000}  
+  
+# вызов с 2мя позиционными значениями  
+  
+print(merge_lists_to_dict(brand=brand, price=price))  
+{'BMW': 30000, 'Audi': 35000, 'Toyota': 28000}  
+# {'BMW': 30000, 'Audi': 35000, 'Toyota': 28000}  
+  
+# вызов с 1 позиционным значением  
+print(merge_lists_to_dict(brand, price=price))  
+# {'BMW': 30000, 'Audi': 35000, 'Toyota': 28000}
+```
+
+> Задача 2
+- Создать функцию _update_car_info_, в которой все именованные аргументы будут объединяться в словарь _car_
+- Добавить в словарь ключ _is_available_ с значением _True_
+- Вернуть из функции изменённый словарь
+- Вызвать функцию с именованными аргументами _brand_ и _price_, их значения могут быть любыми
+- Вывести в терминал результат функции
+
+> Решение
+
+```python
+def update_car_info(**car):
+    print(car)  #{'brand': 'BMW', 'price': 30000}
+    car['is_available'] = True
+    return car
+
+
+info = update_car_info(brand='BMW', price=30000)
+print(info)  #{'brand': 'BMW', 'price': 30000, 'is_available': True}
+
+```
