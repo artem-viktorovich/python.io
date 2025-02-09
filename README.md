@@ -2332,3 +2332,45 @@ def обработка_имени(callback, name):
 2. Название функции начинать с _**глагола**_
 3. _**Одна**_ функция должна выполнять **_одну задачу**_
 4. Не рекомендуется изменять _внешние_ относительно функции _**переменные**_
+
+
+## Документация функции _**docstring**_
+
+Добавление описания функции
+
+> _**docstring**_ - используется для документирования функций, классов, модулей
+
+```python
+def mult_by_factor(value, mult=1):  
+    """
+    Multiplies number by multiplier.        
+    """    
+    return value * mult  
+  
+  
+print(mult_by_factor(2))  # 2
+print(mult_by_factor(3))  # 3
+
+
+#Умножает число на множитель
+```
+
+```python
+def print_number_info(num):  
+    """  
+    Prints whether number is even or odd  
+            Args:       
+               num (int): number to be evaluated    """    if (num % 2) == 0:  
+        print("Num is even")  
+    else:  
+        print("Num is  odd")  
+  
+print_number_info(5)  
+  
+  
+"""  
+	Выводит, является ли число четным или нечетным                   
+	    Аргументы:  
+           num (int): вычисляемое число
+"""
+```
