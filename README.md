@@ -2576,7 +2576,7 @@ print('car' not in my_car)  # True
 Ложные значения
 1. int   0
 2. float  0.0
-3. comolex 0j
+3. complex 0j
 
 Как определить ложное значение? Только вызовом функции _bool_
 
