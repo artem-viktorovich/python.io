@@ -2568,3 +2568,50 @@ print('car' not in my_car)  # True
 
 # Проверка присутствия элемента в последовательности
 ```
+
+### Ложные значения
+
+> Значение, которое при приведении к логическому типа даёт _false_, является _ложным_
+
+Ложные значения
+1. int   0
+2. float  0.0
+3. comolex 0j
+
+Как определить ложное значение? Только вызовом функции _bool_
+
+```python
+print(bool(0))  # False
+print(bool(0.0))  # False
+print(bool(0j))  # False
+print(bool(None))  # False
+```
+
+Ложными также являются все пустые последовательности
+
+1. dict {}
+2. list []
+3. tuple ()
+4. set set()
+5. range range(0)
+6.  str ""
+
+```python
+print(bool({}))  # False
+print(bool([]))  # False
+print(bool(()))  # False
+print(bool(set()))  # False
+print(bool(range(0)))  # False
+print(bool(""))  # False
+```
+
+bool можно заменить конструкцией not not
+
+```python
+print(not not({}))  # False
+print(not not([]))  # False
+print(not not(()))  # False
+print(not not(set()))  # False
+print(not not(range(0)))  # False
+print(not not(""))  # False
+```
