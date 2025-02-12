@@ -2615,3 +2615,32 @@ print(not not(set()))  # False
 print(not not(range(0)))  # False
 print(not not(""))  # False
 ```
+
+## Логические операторы
+
+_**not**_ - всегда возвращает значение типа _bool_
+_**and**_ и _**or**_ - возвращает значение одного из операндов
+
+> Оператор _not_ чаще всего используется в условных инструкциях _if_
+
+> Примеры с оператором _not_
+
+```python
+print(not 10)  # False
+print(not 0)  # True
+print(not 'abc')  # False
+print(not '')  # True
+print(not True)  # False
+print(not None)  # True
+```
+
+Отрицание отрицания - _not not_
+
+```python
+print(not not 10)  # True
+print(not not 0)  # False
+print(not not 'abc')  # True
+print(not not '')  # False
+print(not not True)  # True
+print(not not None)  # False
+```
